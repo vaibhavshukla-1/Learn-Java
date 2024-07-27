@@ -5,8 +5,7 @@ public class Author {
     private String email;
     private char gender;
 
-    // Constructors
-    public Author() {}
+    // Constructor
     
     public Author(String name, String email, char gender) {
         this.name = name;
@@ -37,4 +36,5 @@ public class Author {
       String result = "Author[name = " + getName() + " , email = " + getemail() + " , gender = " + getgender() + "]";
       return result;
     }
+
     }

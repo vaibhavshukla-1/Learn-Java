@@ -7,8 +7,7 @@ public class Book
     private double price;
     private int quantity = 0;
 
-    // Constructors
-    public Book() {}
+    // Constructor
 
     public Book(String name, Author author , double price) {
         this.name = name;
@@ -16,19 +15,21 @@ public class Book
         this.price = price;
     }
 
-    public Book(String name, Author author , int quantity) {
+    public Book(String name, Author author , double price , int quantity) {
         this.name = name;
         this.author = author;
+        this.price = price;
         this.quantity = quantity;
     }
 
     // Getters and Setters
+    
     public String getname() {
         return name;
     }
 
-    public String getAuthor() {
-        return author.getName();
+    public Author getAuthor() {
+        return author;
     }
 
     public double getPrice() {
@@ -46,4 +47,23 @@ public class Book
     public void setquantity(int quantity) {
         this.quantity = quantity;
     }
+
+    public String toString()
+    {
+      String result = "Book[name = " + getname() + " , " +  getAuthor() + " , price = " + getPrice() + " , quantity = " + getquantity() + "]";
+      return result;
+    }
+
+    public String getAuthorName() {
+        return author.getName();
+    }
+
+    public String getAuthorEmail() {
+        return author.getemail();
+    }
+
+    public char getAuthorGender() {
+        return author.getgender();
+    }
+
 }
